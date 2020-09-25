@@ -21,6 +21,8 @@ Sensor metric update listener updates sensor status:
 * to OK if there are 3 consecutive OK statuses.
 * to WARN if current status is OK.
 
+Listener can be refacored to async, with bigger load listener can be moved to a separate service. It will increase wirte performance and will allow smart scaling for heavy read/write operations.
+
 Sensor status is stored in ```sensor_current_status``` table.
 
 Historical alerts are calculated in runtime, if 3 consecutive metrics have status WARN they are grouped to AlertAggregate with start/end date and co2 value from each metric.
