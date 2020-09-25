@@ -26,3 +26,4 @@ Listener can be refacored to async, with bigger load listener can be moved to a 
 Sensor status is stored in ```sensor_current_status``` table.
 
 Historical alerts are calculated in runtime, if 3 consecutive metrics have status WARN they are grouped to AlertAggregate with start/end date and co2 value from each metric.
+Metric snapshots can be used to decrease aggeration time.
